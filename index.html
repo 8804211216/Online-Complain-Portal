@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain</title>
+</head>
+<style>
+    body {
+        
+        margin: unset;
+        background-image: url("background.avif");
+    }
+    input{
+        color: black;
+        font-weight: bold;
+    }
+    #head_logo {
+        display: inline;
+    }
+
+    #heading {
+        display: flex;
+        background: rgba(76, 175, 80, 0.7);
+        color: white;
+    }
+
+    #head_title {
+        justify-content: center;
+    }
+
+    .Navigation {
+        display: flex;
+        background-color: rgb(85, 117, 90);
+    }
+
+    ul {
+        display: flex;
+        /*#http://localhost/php projct/index/*/
+        float: left;
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 15px;
+        font-size: large;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding-left: 20px;
+    }
+
+    #login {
+        margin-top: 15px;
+        margin-left: 800px;
+        font-size: large;
+        display: flex;
+        float: right;
+
+    }
+
+    /* body part*/
+    #body {
+        /* border: 2px solid red; */
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        align-items: center;
+    }
+
+    #form {
+        /* border: 2px solid red; */
+        margin-left: 35%;
+        align-items: center;
+        text-align: center;
+    }
+    /* tr,td{
+        border: 2px solid red;;
+    } */
+    .foot{
+        /* border: 2px solid red; */
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="heading">
+        <div id="head_logo">
+            <img src="istockphoto-1171617683-612x612.png" alt="logo" height="100px" width="100px">
+        </div>
+        <div id="head_title">
+            <h1>ONLINE COMPLAINT PORTAL</h1>
+        </div>
+    </div>
+    <div class="Navigation">
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Navigation</li>
+                </a>
+                <a href="#body">
+                    <li>Complain</li>
+                </a>
+                <a href="#">
+                    <li>Feedback</li>
+                </a>
+            </ul>
+        </nav>
+        <div id="login">
+            <a href="Login.php">Sign in</a>
+            <!-- <a href="#">Register</a> -->
+        </div>
+    </div>
+
+    <div id="body">
+        <h2 style="text-align: center;margin: unset;">Enter your Complain</h2>
+        <div id="form">
+            <table style="margin: unset;">
+                <form action="insert.php" method="post" class="f">
+                    
+                    <tr>
+                        <td><label for="reg">Registration Number:</label></td>
+                        <td><input type="number" name="reg" id="reg"></td>
+                    </tr><br>
+                    <tr>
+                        <td><label for="fname">Full Name:</label></td>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr><br>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="radio" name="m" value="Male" />Male<input type="radio" name="m"
+                                value="Female" />Female </td>
+                    </tr><br>
+                    <tr>
+                        <td><label for="mail">Email:</label></td>
+                        <td><input type="email" name="mail" id="mail"></td>
+                    </tr><br>
+                    <tr>
+                        <td><label for="department">Department:</label></td>
+                        <td><input type="text" name="department" id="department"></td>
+                    </tr><br>
+                    <tr>
+                        <td><label for="complain">Enter your Complain</label></td>
+                        <td><textarea id="complain" cols="30" rows="8" name="complain"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Feedback">Enter your Feedback</label></td><br>
+                        <td><textarea name="Feedback" id="Feedback" cols="30" rows="5"></textarea></td><br>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="submit"></td>
+                    </tr>
+
+                </form>
+            </table>
+        </div>
+    </div> 
+    <div style="border: 2px solid red;">
+        <h4>Track by Your Complain with your ID</h4>
+        <form action="track.php" method="post">
+            <input type="text" name="reg">
+            <input type="submit" value="Search">
+        </form>
+
+    </div>
+
+</body>
+</html>
